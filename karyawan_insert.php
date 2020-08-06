@@ -9,12 +9,12 @@
         $password = $_POST['password'];
         $uid      = $_POST['uid'];
       
-        $file = file_get_contents('json\karyawan.json');
+        $file = file_get_contents('./json/karyawan.json');
         $data = json_decode($file, true);
         unset($_POST["add"]);
         $data["records"] = array_values($data["records"]);
         array_push($data["records"], $_POST);
-        file_put_contents("json\karyawan.json", json_encode($data));
+        file_put_contents("./json/karyawan.json", json_encode($data));
         header("Location: view_karyawan.php");
     }
 ?>
@@ -23,7 +23,7 @@
   session_start();
   $nama = $_SESSION['nama'];
   $akses = $_SESSION['akses'];
-  $getfile = file_get_contents('json\karyawan.json');
+  $getfile = file_get_contents('./json/karyawan.json');
   $jsonfile = json_decode($getfile);
 ?>
 <!DOCTYPE html>
