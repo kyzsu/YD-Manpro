@@ -4,12 +4,12 @@
         $absen_masuk  = $_POST['absen_masuk'];
         $absen_keluar  = $_POST['absen_keluar'];
       
-         $file = file_get_contents('json\absen.json');
+         $file = file_get_contents('json/absen.json');
         $data = json_decode($file, true);
         unset($_POST["add"]);
         $data["records"] = array_values($data["records"]);
         array_push($data["records"], $_POST);
-        file_put_contents("json\absen.json", json_encode($data));
+        file_put_contents("json/absen.json", json_encode($data));
         header("Location: view_absensi.php");
     }
 ?>
@@ -18,7 +18,7 @@
   session_start();
   $nama = $_SESSION['nama'];
   $akses = $_SESSION['akses'];
-  $getfile = file_get_contents('json\karyawan.json');
+  $getfile = file_get_contents('json/karyawan.json');
   $jsonfile = json_decode($getfile);
 ?>
 <!DOCTYPE html>

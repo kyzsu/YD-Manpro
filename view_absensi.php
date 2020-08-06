@@ -2,7 +2,7 @@
   session_start();
   $nama = $_SESSION['nama'];
   $akses = $_SESSION['akses'];
-  $getfile = file_get_contents('json\absen.json');
+  $getfile = file_get_contents('json/absen.json');
   $jsonfile = json_decode($getfile);
 ?>
 <!DOCTYPE html>
