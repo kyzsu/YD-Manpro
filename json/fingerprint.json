@@ -1,0 +1,20 @@
+{
+	"records": [
+		{
+			"uid" : "1",
+			"nama" : "Dia",
+			"status" : "1"
+		},
+		{
+			"uid" : "2",
+			"nama" : "Arbitra",
+			"status" : "1"
+		},
+		{
+			"uid" : "3",
+			"nama" : "Arvira",
+			"status" : "1"
+		}
+	]
+
+}
